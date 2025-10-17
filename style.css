@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  min-height: 100vh;
+  background: white;
+  font-size: large;
+}
+
+
+.tombol-buka {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 20;
+  transition: background 0.2s;
+  font-size: large;
+}
+
+.tombol-buka:hover {
+  background: #555;
+}
+
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none; 
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+
+.kotak-modal {
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  text-align: center;
+  max-width: 300px;
+  width: 90%;
+  animation: muncul 0.25s ease;
+}
+
+
+.tombol-tutup {
+  margin-top: 15px;
+  background: crimson;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 7px 14px;
+  cursor: pointer;
+  font-size: large;
+}
+
+.tombol-tutup:hover {
+  background: #a51414;
+}
+
+
+@keyframes muncul {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
